@@ -1,0 +1,128 @@
+﻿<div id="editprofile_section">
+
+    <h2></h2>
+
+    <div class="row">
+        <div class="col-md-3 text-center">
+            <style>
+        ul.hr {
+            margin: 0; 
+          }
+
+            ul.hr li {
+                display: inline-block; 
+                
+               list-style-type: none;
+            }
+            </style>
+
+            <h2></h2>
+            <form enctype="multipart/form-data" action="#" data-bind="submit: loadpicture" method="post" style="width:180px;height:180px;" id="image_form">
+                
+                
+                <div style="position:relative;">
+                    <a class='btn btn-default' href='javascript:;'>
+                       
+                        <img id="avatar" data-bind="attr:{src: Imagesrc }"  style="width:180px;height:180px;" border="0"  />
+                          
+                        <input type="file" accept="image/png,image/jpg,image/jpeg,image/bmp,image/gif" style='position:absolute;top:0;left:0;height:180px;width:180px;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source"  onchange='$("#upload-file-info").html($(this).val());'>
+                        
+                    </a>
+                    <h2></h2>
+                    <span class='label label-info' id="upload-file-info"></span>
+                    <h2></h2>
+                </div>
+
+                <input type="submit" class="btn btn-default " value="Load new picture" />
+            </form>
+
+        </div>
+        <div class="col-md-4 ">
+            <h1>
+                <strong data-bind="text: fullName">FullName</strong>
+            </h1>
+            <ul data-bind="foreach: informationStatus" id="information_list">
+                <li>
+                    <div class="alert alert-success">
+                        <span data-bind="text: $data"> </span>
+                    </div>
+                </li>
+            </ul>
+            <ul data-bind="foreach: nameErrors" id="nameErrors_list">
+                <li>
+                    <div class="alert alert-danger">
+                        <span data-bind="text: $data"> </span>
+                    </div>
+                </li>
+            </ul>
+
+            <form action="#" data-bind="submit: savedata" autocomplete="off" class="form-horizontal" method="post">
+
+                <div class="form-group">
+                    <label for="usrname">First name:</label>
+                    <input type="text" class="form-control" id="usrname" value="Nazar" data-bind="textInput: FirstName" placeholder="Required" required maxlength="15">
+                </div>
+
+                <div class="form-group">
+                    <label for="usrscname">Last name:</label>
+                    <input type="text" class="form-control" id="usrscname" value="Popkov" data-bind="textInput: SecondName" placeholder="Required" required maxlength="15">
+                </div>
+
+                <hr />
+                <p> Change password </p>
+                <ul data-bind="foreach: passwordErrors" id="errors_list">
+
+                    <li>
+                        <div class="alert alert-danger">
+                            <span data-bind="text: $data"> </span>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <div class="form-group" style="display:none">
+                    <label for="opwd">Old password:</label>
+                    <input type="password" class="form-control" id="phantompassword" autocomplete="off" style="display:none" data-bind="value: OldPassword">
+                </div>
+
+                <div class="form-group">
+                    <label for="opwd">Old password:</label>
+                    <input type="password" class="form-control" id="opwd" autocomplete="off" data-bind="value: OldPassword">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="pwd">New password:</label>
+                    <input type="password" class="form-control" id="npwd1" autocomplete="off" data-bind="value: NewPassword">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="pwd">Repeat new password:</label>
+                    <input type="password" class="form-control" id="npwd2" autocomplete="off" data-bind="value: NewPasswordConfirmation">
+                </div>
+
+                <hr />
+
+                <div class="form-group">
+                    <label for="comment">About myself:</label>
+                    <textarea class="form-control" rows="5" id="comment" data-bind="textInput: About">
+                        Basically cycling is a part of my soul .Like to to it with my friends and just like everyone else - it really makes me happy
+                    </textarea>
+                </div>
+                <div class="form-group">
+                    <hr />
+                    <ul class="hr">
+                        <li><button type="button" class="button special" id="profile_btn" data-bind="click: cancelchanges" style="margin-bottom:40px;margin-left:40px;font-size:14px;" resource="">Cancel </button></li>
+                    <li><input type="submit" id="submitButton" class="button special"style="font-size:14px;" value="Save changes" /></li>
+                        </ul>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title -GameContester</title>
+    <style>
+        ul.hr {
+            margin: 0; 
+          }
+
+            ul.hr li {
+                display: inline; 
+               list-style-type: none;
+            }
+            .header_img{
+                display: inline-block;
+                float:left;
+                margin-left:10px;
+                margin-top:12px;
+                padding-top: 0;
+                background-size: cover;
+                background-size: cover;
+                background-position: center;
+              }
+    </style>
+       
+
+        
+              <title>@ViewBag.Title -GameContester</title>
+
+        <script src="@Url.Content("jquery.min.js")"></script>
+        <script src="@Url.Content("skel.min.js")"></script>
+        <script src="@Url.Content("skel-layers.min.js")"></script>
+        <script src="@Url.Content("init.js")"></script>
+
+    <link rel="stylesheet" href="skel.css" />
+    <link rel='stylesheet' href="style.css" />
+    <link rel='stylesheet' media='(min-width: 1600px)' href='style-xlarge.css' />
+    <link rel='stylesheet' media='(max-width: 1599px) and (min-width: 800px)' href='style-medium.css' />
+    <link rel='stylesheet' media='(max-width: 799px) and (min-width:10px)' href='style-xsmall.css' />
+
+      
+
+    </head>
+    <body class="page-header">
+        <header id="header">
+           <div class="header_img">
+            <img src="~/Content/Images/Logo.png"  width="320" height="47"  />
+               </div>
+
+                <div data-bind="authBinding" id="userpanel">
+                    <div id="anonim">
+                        <nav id="nav">
+                            <ul class="hr" id="anonimus" style="margin-top:0px">
+                                <li><a href="#game" class="button special">Game</a></li>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#login" class="button special">Sign In</a></li>
+                                <li><a href="#register" class="button special">Sign Up</a></li>
+                            </ul>
+                        </nav>
+                        </div>
+                        <div id="user">
+                            <nav id="nav">
+                                <ul class="hr">
+                                    <li><a href="#game"  class="button special">Game</a></li>
+                                    <li><a href="#">Home</a></li>
+                                    <li>
+                                        <a href="#profile?my" id="registerLink"><div id="user-name">Name Surname</div></a>
+                                    </li>
+                                    <li style="margin-left:25px">
+                                        <a href="#" id="registerLink" class="button special logout"><div>Sign out</div></a>
+                                    </li>
+                                </ul>
+                                </nav>
+</div>
+                    
+                        <div id="admin">
+                            <nav id="nav">
+                                <ul class="hr">
+                                    <li><a href="#game"  class="button special">Game</a></li>
+                                    <li><a href="#">Home</a></li>
+                                    <li style="margin-right:2px">
+                                        <a href="#admin" class="panel-heading" id="registerLink">Admin panel</a>
+                                    </li>
+                                    <li>
+                                        <a href="#profile?my" id="registerLink"><div id="user-name">Name Surname</div></a>
+                                    </li>
+                                    <li style="margin-left:25px">
+                                        <a href="#" id="registerLink" class="button special logout">Sign out</a>
+                                    </li>
+                                </ul>
+                            </nav>
+</div>
+                        
+</div>
+          
+        </header>
+
+            
+        <div class="container body-content">
+            <div id="page1" class="container" style="padding-top:50px" data-bind="component: { name: route().page, params: route }"></div>
+        </div>
+        <script src="App/boot/require.config.js"></script>
+        <script data-main="App/boot/startup" src="Scripts/require/require.js"></script>
+        <script src="~/Scripts/jquery-1.10.2.js"></script>
+        <script src="~/Scripts/App_Scripts/LayoutScript.js"></script>
+        <div class="container body-content" hidden="hidden">
+            @RenderBody()
+        </div>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+
+    </body>
+</html>
