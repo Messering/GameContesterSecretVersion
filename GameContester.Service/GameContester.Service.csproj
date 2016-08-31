@@ -220,6 +220,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\GameController.cs" />
     <Compile Include="Controllers\ProfilePictureController.cs" />
     <Compile Include="GeneralExceptionHandler.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
@@ -230,6 +231,7 @@
     <Compile Include="Models\CaptchaModel.cs" />
     <Compile Include="Models\EditProfileViewModel.cs" />
     <Compile Include="Models\ForgotPasswordModel.cs" />
+    <Compile Include="Models\GameViewModel.cs" />
     <Compile Include="Models\LoginResponseModel.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Models\ProfileViewModel.cs" />

@@ -1,26 +1,40 @@
-﻿<!--  -->
+﻿<div class="row">
+    <div >
+        <section id="gameForm">
+            <form action="#" data-bind="submit: sendcode" class="form-horizontal" method="post">
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+                <div class="login-form-position">
+                    <fieldset>
+                        <legend>
+                            Code
+                        </legend>
+
+                        <div class="login-form">
+                            <div class="alert alert-dismissible alert-danger" hidden="hidden" id="error_message">
+                                <strong id="error_details"></strong>
+                            </div>
+                            <div class="login-form-content">
+                                <br />
 
 
+                                <div class="form-group">
+                                    <label for="Code" class="col-md-2 control-label">Code:</label>
+                                    <div class="col-md-10">
+                                        <input type="text" required class="form-control" id="Code" data-bind="textInput: code" placeholder="Required">
+                                    </div>
+                                </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/skel.min.js"></script>
-    <script src="js/skel-layers.min.js"></script>
-    <script src="js/init.js"></script>
-
-
-    <link rel="stylesheet" href="skel.css" />
-    <link rel='stylesheet' href="style.css" />
-    <link rel='stylesheet' media='(min-width: 1000px)' href='style-xlarge.css' />
-    <link rel='stylesheet' media='(max-width: 999px) and (min-width: 500px)' href='style-medium.css' />
-    <link rel='stylesheet' media='(max-width: 499px) and (min-width:10px)' href='style-xsmall.css' />
-
-</head>
-<body class="body-content">
-
-    <p1>Game Test page</p1>
-</body>
-</html>
+                                
+                                    
+                                        <input type="submit" id="submitButton" class="" style="margin-left:95px" value="Send" />
+                                    
+                                
+                                <br />
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>

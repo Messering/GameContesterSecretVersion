@@ -5,7 +5,26 @@
 
         var self = this;
 
-        self.id = ko.observable();
+        self.code = ko.observable("");
+        self.sendcode = function ()
+        {
+            var codeCompiler = {
+              Code:  $('#Code').val()
+            };
+            $.ajax({
+                url: "http://localhost:51952/api/game/sendcode",
+                contentType: 'application/x-www-form-urlencoded',
+                type: "POST",
+                data: codeCompiler,
+                success: function (data) {
+                    console.log(data);
+                },
+                error: function (data) {
+                    console.log(data);
+                    
+                }
+            });
+        }
 
 
         return self;
